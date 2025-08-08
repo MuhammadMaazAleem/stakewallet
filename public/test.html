@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DApp - Server Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #1a1a1a; color: white; }
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        .status { padding: 20px; margin: 10px; border-radius: 8px; }
+        .success { background: #22c55e; }
+        .error { background: #ef4444; }
+        .info { background: #3b82f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 DApp Staking Dashboard - Server Test</h1>
+        
+        <div class="status success">
+            <h2>✅ Frontend Server is Running!</h2>
+            <p>If you can see this page, the Vite development server is working correctly.</p>
+        </div>
+
+        <div class="status info">
+            <h3>Next Steps:</h3>
+            <p>1. Close this browser tab</p>
+            <p>2. Wait 30 more seconds for the React app to load</p>
+            <p>3. Refresh the page or go to: <a href="/" style="color: #60a5fa;">http://localhost:5173</a></p>
+        </div>
+
+        <div class="status info">
+            <h3>🔧 Backend Status</h3>
+            <p>Backend should be running on: <a href="http://localhost:5000" style="color: #60a5fa;">http://localhost:5000</a></p>
+            <button onclick="checkBackend()" style="padding: 10px 20px; background: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer;">Test Backend Connection</button>
+            <div id="backend-status" style="margin-top: 10px;"></div>
+        </div>
+
+        <div class="status info">
+            <h3>📱 Expected Features</h3>
+            <ul style="text-align: left; display: inline-block;">
+                <li>Professional staking dashboard</li>
+                <li>Three staking pools (ETH, BTC, USDC)</li>
+                <li>MetaMask wallet connection</li>
+                <li>Portfolio statistics</li>
+                <li>Transaction history</li>
+                <li>Real-time charts</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        async function checkBackend() {
+            const statusDiv = document.getElementById('backend-status');
+            statusDiv.innerHTML = 'Checking backend...';
+            
+            try {
+                const response = await fetch('http://localhost:5000/api/health');
+                if (response.ok) {
+                    statusDiv.innerHTML = '✅ Backend is running correctly!';
+                    statusDiv.style.color = '#22c55e';
+                } else {
+                    statusDiv.innerHTML = '⚠️ Backend responded but with error';
+                    statusDiv.style.color = '#f59e0b';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '❌ Backend is not responding (this is normal if not started yet)';
+                statusDiv.style.color = '#ef4444';
+            }
+        }
+
+        // Auto-refresh to main app after 30 seconds
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 30000);
+    </script>
+</body>
+</html>

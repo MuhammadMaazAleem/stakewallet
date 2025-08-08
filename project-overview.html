@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Modern DApp Staking Frontend</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        h1 {
+            background: linear-gradient(135deg, #a855f7, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature h3 {
+            color: #a855f7;
+            margin-bottom: 10px;
+        }
+        
+        .steps {
+            text-align: left;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .steps h3 {
+            color: #10b981;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .steps ol {
+            margin-left: 20px;
+        }
+        
+        .steps li {
+            margin: 10px 0;
+            color: #e5e7eb;
+        }
+        
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .tech {
+            background: rgba(99, 102, 241, 0.2);
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            font-size: 14px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+            to { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container glow">
+        <div class="logo">S</div>
+        
+        <h1>Modern DApp Staking Frontend</h1>
+        <p style="font-size: 18px; color: #d1d5db; margin-bottom: 30px;">
+            A beautiful, modern staking dashboard built with Vite + React + TypeScript
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>🎨 Gaming UI</h3>
+                <p>Dark theme with gradients and glow effects</p>
+            </div>
+            <div class="feature">
+                <h3>💰 Multi-Token</h3>
+                <p>ETH, BTC, MATIC staking pools</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Portfolio</h3>
+                <p>Track positions and rewards</p>
+            </div>
+            <div class="feature">
+                <h3>🔗 Multi-Wallet</h3>
+                <p>MetaMask, WalletConnect, Coinbase</p>
+            </div>
+        </div>
+        
+        <div class="steps">
+            <h3>🚀 Quick Setup</h3>
+            <ol>
+                <li><strong>Install Dependencies:</strong> Run <code>npm install</code></li>
+                <li><strong>Start Development:</strong> Run <code>npm run dev</code></li>
+                <li><strong>Open Browser:</strong> Navigate to <code>http://localhost:3000</code></li>
+                <li><strong>Connect Wallet:</strong> Choose from 3 wallet options</li>
+                <li><strong>Start Staking:</strong> Select pools and earn rewards!</li>
+            </ol>
+        </div>
+        
+        <div class="tech-stack">
+            <span class="tech">⚡ Vite</span>
+            <span class="tech">⚛️ React 18</span>
+            <span class="tech">📘 TypeScript</span>
+            <span class="tech">🎨 Tailwind CSS</span>
+            <span class="tech">🔗 Ethers.js</span>
+            <span class="tech">🎭 Framer Motion</span>
+        </div>
+        
+        <div class="footer">
+            <p>🎯 Perfect for DeFi projects, gaming protocols, and Web3 applications</p>
+            <p>Built with ❤️ for the decentralized future</p>
+        </div>
+    </div>
+</body>
+</html>
